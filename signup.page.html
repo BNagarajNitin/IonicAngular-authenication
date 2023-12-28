@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <p class="welcome">Welcome</p>
+
+  <form [formGroup]="regForm">
+    <div class="padding">
+      <p>Signup to create a new account</p>
+      <ion-item>
+        <ion-input placeholder="Name" formControlName="fullname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Email" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Password" formControlName="password"></ion-input>
+      </ion-item>
+      
+      <div>
+        <p>Already a member?<a [routerLink]="['/login']">Sign in?</a></p>
+      </div>
+    </div>
+
+    <!-- Move the ion-button inside the form -->
+    <ion-button (click)="signup()">Register</ion-button>
+  </form>
+</ion-content>
